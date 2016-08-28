@@ -1,7 +1,7 @@
 from uuid import uuid4
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler
 from telegram.ext import MessageHandler, Filters
-from telegram import InlineQueryResultPhoto, InputTextMessageContent
+from telegram import InlineQueryResultPhoto, InlineQueryResultGif, InputTextMessageContent
 import logging
 import config
 
@@ -86,6 +86,41 @@ def inlinequery(bot, update):
                                           title="sick of the weirdos",
                                           photo_url="https://data.whicdn.com/images/124205910/large.jpg",
                                           thumb_url="https://data.whicdn.com/images/124205910/large.jpg",
+                                          ))
+
+  results.append(InlineQueryResultGif(id=uuid4(),
+                                          type="gif",
+                                          title="all I hate",
+                                          gif_url="http://starcrush.com/files/2013/08/ghost-world6.gif",
+                                          thumb_url="http://starcrush.com/files/2013/08/ghost-world6.gif",
+                                          ))
+
+  results.append(InlineQueryResultGif(id=uuid4(),
+                                          type="gif",
+                                          title="poisoning everybody",
+                                          gif_url="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr03/2013/3/19/16/anigif_enhanced-buzz-28104-1363723463-20.gif",
+                                          thumb_url="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr03/2013/3/19/16/anigif_enhanced-buzz-28104-1363723463-20.gif",
+                                          ))
+
+  results.append(InlineQueryResultGif(id=uuid4(),
+                                          type="gif",
+                                          title="I hate my interests",
+                                          gif_url="https://s3-ak.buzzfed.com/static/enhanced/webdr02/2013/3/19/16/anigif_enhanced-buzz-25232-1363724828-12.gif",
+                                          thumb_url="https://s3-ak.buzzfed.com/static/enhanced/webdr02/2013/3/19/16/anigif_enhanced-buzz-25232-1363724828-12.gif",
+                                          ))
+
+  results.append(InlineQueryResultGif(id=uuid4(),
+                                          type="gif",
+                                          title="High on life",
+                                          gif_url="https://24.media.tumblr.com/b3eedb9df5de2e457768849d5635710c/tumblr_mi8x0dX5Gd1qd4d7jo2_500.gif",
+                                          thumb_url="https://24.media.tumblr.com/b3eedb9df5de2e457768849d5635710c/tumblr_mi8x0dX5Gd1qd4d7jo2_500.gif",
+                                          ))
+
+  results.append(InlineQueryResultGif(id=uuid4(),
+                                          type="gif",
+                                          title="excited",
+                                          gif_url="https://24.media.tumblr.com/tumblr_lyjiut8frh1qev1kto1_500.gif",
+                                          thumb_url="https://24.media.tumblr.com/tumblr_lyjiut8frh1qev1kto1_500.gif",
                                           ))
 
   bot.answerInlineQuery(update.inline_query.id, results=results)
