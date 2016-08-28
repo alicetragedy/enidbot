@@ -3,6 +3,7 @@ from telegram.ext import Updater, InlineQueryHandler, CommandHandler
 from telegram.ext import MessageHandler, Filters
 from telegram import InlineQueryResultPhoto, InlineQueryResultGif, InputTextMessageContent
 import logging
+import os
 #import config
 
 # Enable logging
