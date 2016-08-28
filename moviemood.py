@@ -25,7 +25,7 @@ def hello(bot, update):
 def help(bot, update):
   bot.sendMessage(update.message.chat_id, text='Help!')
 
-def ghostworld(bot, update):
+def justkillme(bot, update):
   bot.sendPhoto(chat_id=update.message.chat_id, photo='https://24.media.tumblr.com/tumblr_mebsc3BYeW1qkyz1oo2_500.png')
 
 def inlinequery(bot, update):
@@ -51,9 +51,6 @@ def inlinequery(bot, update):
 
 # Helpers
 
-echo_handler = MessageHandler([Filters.text], echo)
-caps_handler = CommandHandler('caps', caps, pass_args=True)
-
 updater = Updater(config.TELEGRAM_SECRET_KEY)
 
 # For quicker access to the Dispatcher used by your Updater
@@ -63,7 +60,7 @@ dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler('start', start))
 dispatcher.add_handler(CommandHandler('hello', hello))
 dispatcher.add_handler(CommandHandler('help', help))
-dispatcher.add_handler(CommandHandler('ghostworld', ghostworld))
+dispatcher.add_handler(CommandHandler('justkillme', justkillme))
 
 # on noncommand i.e message - echo the message on Telegram
 dispatcher.add_handler(InlineQueryHandler(inlinequery))
