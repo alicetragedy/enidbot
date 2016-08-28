@@ -3,6 +3,7 @@ from telegram.ext import Updater, InlineQueryHandler, CommandHandler
 from telegram.ext import MessageHandler, Filters
 from telegram import InlineQueryResultPhoto, InputTextMessageContent
 import logging
+import config
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -60,7 +61,7 @@ def inlinequery(bot, update):
 echo_handler = MessageHandler([Filters.text], echo)
 caps_handler = CommandHandler('caps', caps, pass_args=True)
 
-updater = Updater('access_token')
+updater = Updater(config.TELEGRAM_SECRET_KEY)
 
 # For quicker access to the Dispatcher used by your Updater
 dispatcher = updater.dispatcher
