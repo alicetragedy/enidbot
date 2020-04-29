@@ -26,6 +26,10 @@ TELEGRAM_SECRET_KEY = '269725652:AAFUfzsbHAnl_SbRnJa3aOTrctC8A3oAwME'
 Your config will be imported directly in the main file, and it's also added to your `.gitignore` file by default (so you don't accidentally check your secret key into git).  
 That's it, you're ready to go!
 
+### Deployment
+
+Deploying with [heroku](https://heroku.com/) is pretty straightforward. You can find the configuration for heroku on the `heroku` branch (some small changes in config need to be made in your main.py file). If you change your app's main file's name, make sure you update your Procfile accordingly. Before (or after) you deploy, you also need to set up your Config Vars accordingly — see the [heroku documentation on that](https://devcenter.heroku.com/articles/config-vars).
+
 ## Demo
 
-coming soon.
+If you have Telegram, you can ping [@EnidBot](https://telegram.me/EnidBot) or bring the bot into a conversation by typing `@EnidBot ` at the start of a message (the space is important!). Let yourself be amazed!
